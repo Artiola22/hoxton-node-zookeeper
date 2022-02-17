@@ -22,3 +22,13 @@ UPDATE Zoo SET name="Hulala" WHERE id=6;
 -- DELETE
 DELETE FROM Zoo WHERE id=6;
 DELETE FROM Zoo WHERE id=4;
+
+
+ALTER TABLE Zoo ADD COLUMN origin;
+ALTER TABLE Zoo ADD COLUMN City;
+
+UPDATE Zoo SET origin= "Albania" WHERE id IN (1,5);
+
+UPDATE Zoo SET origin="Italy" WHERE id IN (2,3,8);
+UPDATE Zoo SET City="Florence" WHERE id IN (2,3,8);
+UPDATE Zoo SET City="Tepelene" WHERE id IN (1,7);
